@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux';
 import ProductItem from './ProductItem';
 import classes from './ProductsList.module.scss';
 
@@ -5,13 +6,15 @@ import classes from './ProductsList.module.scss';
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-27 02:05:29
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-27 08:02:55
+ * @LastEditTime: 2023-04-28 02:03:48
  * @FilePath: \workspace\ez-swap\src\components\products\ProductsList.jsx
  * @Description:
  *
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
  */
-function ProductsList({ nftData }) {
+function ProductsList() {
+  const nftData = useSelector((state) => state.nftDataSlice.nftData);
+  console.log(nftData);
   return (
     <>
       <header className={classes.header}>Trending</header>

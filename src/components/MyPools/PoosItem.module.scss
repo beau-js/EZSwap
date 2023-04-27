@@ -1,0 +1,92 @@
+.container {
+  color: white;
+  width: 64%;
+
+  .title {
+    height: 35px;
+    line-height: 35px;
+    font-size: 32px;
+    margin-top: 32px;
+  }
+
+  .description {
+    height: 22px;
+    margin-bottom: 11px;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 5px;
+  }
+
+  .outCard {
+    height: 179px;
+    padding: 16px;
+
+    .cardHeader {
+      width: 100%;
+
+      .cardHeaderLeft {
+        width: 50%;
+        float: left;
+
+        input {
+          width: 294px;
+          height: 24px;
+          background-color: #ffffff1a;
+          border: none;
+          border-radius: 17.5px;
+          margin-bottom: 9px;
+        }
+
+        .collectionType {
+          width: 300px;
+          height: 31px;
+          margin-left: 16px;
+          margin-bottom: 14px;
+          font-size: 20px;
+          line-height: 31px;
+        }
+      }
+
+      .balance {
+        float: right;
+      }
+    }
+
+    .insideCard {
+      width: 100%;
+      padding: 24px;
+      background-color: #ffffff1a;
+      height: 68px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      div {
+        height: 68px;
+
+        h6 {
+          font-size: 14px;
+          margin: 5px 0;
+          color: #67c6d5;
+        }
+
+        p {
+          font-size: 14px;
+          margin-top: 10px;
+        }
+
+        .bondingCurve {
+          width: 58px;
+          height: 20px;
+          border: 1px solid #66be74;
+          border-radius: 5px;
+          color: #66be74;
+          font-size: 16px;
+          text-align: center;
+          line-height: 18px;
+        }
+      }
+    }
+  }
+}
