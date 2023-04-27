@@ -18,7 +18,11 @@ function ProductItem({ value }) {
     <ul className={classes.products}>
       <Card>
         <li>
-          <img src="/image/image 3.png" alt=""></img>
+          <img
+            className={classes.productImg}
+            src="/image/image 3.png"
+            alt=""
+          ></img>
 
           <div className={classes.container}>
             <div className={classes.title}>{value.title}</div>
