@@ -5,7 +5,7 @@ import classes from './ProductsList.module.scss';
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-27 02:05:29
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-27 06:18:56
+ * @LastEditTime: 2023-04-27 08:02:55
  * @FilePath: \workspace\ez-swap\src\components\products\ProductsList.jsx
  * @Description:
  *
@@ -15,7 +15,7 @@ function ProductsList({ nftData }) {
   return (
     <>
       <header className={classes.header}>Trending</header>
-      <main>
+      <main className={classes.main}>
         {Object.values(nftData).map((value) => (
           <ProductItem value={value} key={value.title}></ProductItem>
         ))}
