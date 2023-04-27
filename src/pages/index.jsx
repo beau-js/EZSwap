@@ -32,7 +32,7 @@ function Home() {
   return (
     <>
       <main className={classes.main}>
-        <title>EZ-Swap</title>
+        <div className={classes.title}>EZ-Swap</div>
         <div className={classes.description}>
           A community based NFT <br />
           decentralized exchange

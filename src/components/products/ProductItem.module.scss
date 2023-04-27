@@ -1,6 +1,7 @@
 .products {
   font-size: 16px;
   width: 64%;
+
   // display: flex;
   // flex-direction: column;
   // align-items: center;
@@ -11,9 +12,14 @@
     list-style: none;
     color: #ffffff;
     display: flex;
+    align-items: center;
 
     .productImg {
+      width: 95px;
+      height: 95px;
       margin-right: 15px;
+      background-color: #323232;
+      border-radius: 8px;
     }
 
     .ethIcon {
@@ -39,6 +45,7 @@
 
         span {
           color: #67c6d5;
+          font-size: 16px;
         }
       }
     }
