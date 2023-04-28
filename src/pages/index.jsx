@@ -8,13 +8,14 @@
  *
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
  */
+
 // our-domain.com/
 
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import ProductsList from '@/components/products/ProductsList';
 import classes from '../styles/Home.module.scss';
 import Button from '@/components/ui/Button';
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
 import { setNftData } from '@/store/features/nftDataSlice';
 
 function Home() {
@@ -31,36 +32,34 @@ function Home() {
   }, []);
 
   return (
-    <>
-      <div className={classes.main}>
-        <section>
-          <div className={classes.title}>EZ-Swap</div>
-          <div className={classes.description}>
-            A community based NFT <br />
-            decentralized exchange
-          </div>
-          <div className={classes.others}>
-            Community Oriented
-            <span>
-              {'\u00A0'} {'\u00A0'} | {'\u00A0'} {'\u00A0'}
-            </span>
-            Decentralized
-            <span>
-              {'\u00A0'} {'\u00A0'} | {'\u00A0'} {'\u00A0'}
-            </span>
-            0.5% Fees
-          </div>
-          <Button type="submit">+ Create New Pool</Button>
+    <div className={classes.main}>
+      <section>
+        <div className={classes.title}>EZ-Swap</div>
+        <div className={classes.description}>
+          A community based NFT <br />
+          decentralized exchange
+        </div>
+        <div className={classes.others}>
+          Community Oriented
+          <span>
+            {'\u00A0'} {'\u00A0'} | {'\u00A0'} {'\u00A0'}
+          </span>
+          Decentralized
+          <span>
+            {'\u00A0'} {'\u00A0'} | {'\u00A0'} {'\u00A0'}
+          </span>
+          0.5% Fees
+        </div>
+        <Button type="submit">+ Create New Pool</Button>
 
-          <input
-            type="text"
-            placeholder="Enter Collection Name or Contract Address"
-          ></input>
-        </section>
+        <input
+          type="text"
+          placeholder="Enter Collection Name or Contract Address"
+        />
+      </section>
 
-        <ProductsList></ProductsList>
-      </div>
-    </>
+      <ProductsList />
+    </div>
   );
 }
 export default Home;
