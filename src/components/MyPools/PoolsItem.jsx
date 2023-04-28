@@ -2,7 +2,7 @@
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-27 18:25:55
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-28 18:47:41
+ * @LastEditTime: 2023-04-28 19:26:17
  * @FilePath: \workspace\ez-swap\src\components\MyPools\PoolsItem.jsx
  * @Description:
  *
@@ -13,31 +13,21 @@ import styles from './PoosItem.module.scss';
 
 function PoolsItem({ value }) {
   let collectionType;
+  let balance;
 
   if (value.title === 'Trading Pools') {
-    collectionType = 'NFT Collection - ETH';
+    balance = `${value.balance.token}ETH ${value.balance.nft}NFTs`;
   }
 
   if (value.title === 'Buy Pools') {
     collectionType = 'ETH → NFT Collection';
+
+    balance = `${value.balance.nft}NFTs`;
   }
 
   if (value.title === 'Sell Pools') {
     collectionType = 'NFT Collection → ETH';
-  }
-
-  let balance;
-
-  try {
-    if (!value.balance.token) {
-      balance = `${value.balance.nft}NFTs`;
-    } else if (!value.balance.nft) {
-      balance = `${value.balance.token}ETH`;
-    } else {
-      balance = `${value.balance.token}ETH`` ${value.balance.nft}NFTs`;
-    }
-  } catch (error) {
-    // console.log(error);
+    balance = `${value.balance.token}ETH`;
   }
 
   return (
