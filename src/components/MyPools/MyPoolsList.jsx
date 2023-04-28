@@ -2,7 +2,7 @@
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-27 16:19:12
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-28 05:22:44
+ * @LastEditTime: 2023-04-28 19:38:59
  * @FilePath: \workspace\ez-swap\src\components\MyPools\MyPoolsList.jsx
  * @Description:
  *
@@ -11,14 +11,10 @@
 
 import { useSelector } from 'react-redux';
 import PoolsItem from './PoolsItem';
-import styles from './MyPoolsList.module.scss';
+import styles from './MyPoolsList.module.scss'; // fix this
 
 function MyPoolsList() {
   const poolsData = useSelector((state) => state.poolsDataSlice.poolsData);
-
-  // if (!poolsData) {
-  //   return <div>Loading...</div>;
-  // }
 
   let obj = { ...poolsData };
   const { tradingPools } = obj;
