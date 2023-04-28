@@ -2,7 +2,7 @@
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-26 23:09:58
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-28 01:41:12
+ * @LastEditTime: 2023-04-28 18:05:56
  * @FilePath: \workspace\ez-swap\src\pages\index.jsx
  * @Description:
  *
@@ -29,7 +29,7 @@ function Home() {
       dispatch(setNftData(data));
     }
     fetchData();
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className={classes.main}>

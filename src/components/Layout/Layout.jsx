@@ -2,7 +2,7 @@
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-26 23:29:45
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-27 01:56:24
+ * @LastEditTime: 2023-04-28 18:14:59
  * @FilePath: \workspace\ez-swap\src\components\Layout\Layout.jsx
  * @Description:
  *
@@ -11,11 +11,11 @@
 
 import MainHeader from './MainHeader';
 
-function Layout(props) {
+function Layout({ children }) {
   return (
     <>
-      <MainHeader></MainHeader>
-      <main>{props.children}</main>
+      <MainHeader />
+      <main>{children}</main>
     </>
   );
 }
