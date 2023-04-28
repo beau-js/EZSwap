@@ -2,7 +2,7 @@
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-27 15:58:25
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-28 02:55:12
+ * @LastEditTime: 2023-04-28 20:27:14
  * @FilePath: \workspace\ez-swap\src\pages\my-pools.jsx
  * @Description:
  *
@@ -28,7 +28,7 @@ function MyPool() {
       dispatch(setPoolsData(data));
     };
     fetchData();
-  }, []);
+  }, [dispatch]);
 
   return (
     <>

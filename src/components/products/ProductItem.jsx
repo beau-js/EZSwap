@@ -2,7 +2,7 @@
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-27 03:36:36
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-28 18:48:38
+ * @LastEditTime: 2023-04-28 20:25:38
  * @FilePath: \workspace\ez-swap\src\components\products\ProductItem.jsx
  * @Description:
  *
@@ -18,10 +18,12 @@ function ProductItem({ value }) {
     <ul className={classes.products}>
       <Card>
         <li>
-          <img
+          <Image
             className={classes.productImg}
             src="/image/image 3.png"
             alt="productLogo"
+            width={95}
+            height={95}
           />
 
           <div className={classes.container}>

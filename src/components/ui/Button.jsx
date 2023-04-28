@@ -13,6 +13,7 @@ import classes from './Button.module.scss';
 function Button({ children, onClick, type }) {
   return (
     <button
+      // eslint-disable-next-line react/button-has-type
       type={type || 'submit'}
       className={classes.button}
       onClick={onClick}
