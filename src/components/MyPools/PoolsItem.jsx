@@ -2,7 +2,7 @@
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-27 18:25:55
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-28 07:10:28
+ * @LastEditTime: 2023-04-28 18:47:41
  * @FilePath: \workspace\ez-swap\src\components\MyPools\PoolsItem.jsx
  * @Description:
  *
@@ -30,13 +30,15 @@ function PoolsItem({ value }) {
 
   try {
     if (!value.balance.token) {
-      balance = value.balance.nft + 'NFTs';
+      balance = `${value.balance.nft}NFTs`;
     } else if (!value.balance.nft) {
-      balance = value.balance.token + 'ETH';
+      balance = `${value.balance.token}ETH`;
     } else {
-      balance = value.balance.token + 'ETH' + ' ' + value.balance.nft + 'NFTs';
+      balance = `${value.balance.token}ETH`` ${value.balance.nft}NFTs`;
     }
-  } catch (error) {}
+  } catch (error) {
+    // console.log(error);
+  }
 
   return (
     <div className={styles.container}>
@@ -58,7 +60,7 @@ function PoolsItem({ value }) {
         <Card className={styles.insideCard}>
           <div>
             <h6>Current Price</h6>
-            <p>{value.currentPrice.toFixed(3) + ' ' + 'ETH'}</p>
+            <p>{`${value.currentPrice.toFixed(3)} ETH`}</p>
           </div>
 
           <div>
@@ -70,12 +72,12 @@ function PoolsItem({ value }) {
 
           <div>
             <h6>Delta</h6>
-            <p>{value.delta.toFixed(3) + ' ' + 'ETH'}</p>
+            <p>{`${value.delta.toFixed(3)} ETH`}</p>
           </div>
 
           <div>
             <h6>Volume</h6>
-            <p>{value.volume.toFixed(3) + ' ' + 'ETH'}</p>
+            <p>{`${value.volume.toFixed(3)} ETH`}</p>
           </div>
         </Card>
       </Card>

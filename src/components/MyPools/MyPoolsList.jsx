@@ -20,8 +20,8 @@ function MyPoolsList() {
   //   return <div>Loading...</div>;
   // }
 
-  let obj = Object.assign({}, poolsData);
-  let tradingPools = obj.tradingPools;
+  let obj = { ...poolsData };
+  const { tradingPools } = obj;
   delete obj.tradingPools;
   obj = { tradingPools, ...obj };
 

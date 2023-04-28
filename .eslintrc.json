@@ -22,6 +22,8 @@
       {
         "extensions": [".jsx", ".js"]
       }
-    ]
+    ],
+    "react/button-has-type": "warn",
+    "no-param-reassign": "warn"
   }
 }

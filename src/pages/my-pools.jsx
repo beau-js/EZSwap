@@ -8,12 +8,12 @@
  *
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
  */
-//our-domain.com/MyPool
+// our-domain.com/MyPool
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Button from '@/components/ui/Button';
 import styles from '../styles/MyPool.module.scss';
-import { useEffect } from 'react';
 import MyPoolsList from '@/components/MyPools/MyPoolsList';
-import { useDispatch } from 'react-redux';
 import { setPoolsData } from '@/store/features/poolsDataSlice';
 
 function MyPool() {
@@ -34,10 +34,10 @@ function MyPool() {
     <>
       <header className={styles.header}>
         <div className={styles.title}>My Pools</div>
-        <input></input>
+        <input />
         <Button>+Create New Pool</Button>
       </header>
-      <MyPoolsList></MyPoolsList>
+      <MyPoolsList />
     </>
   );
 }

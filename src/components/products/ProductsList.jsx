@@ -14,13 +14,12 @@ import classes from './ProductsList.module.scss';
  */
 function ProductsList() {
   const nftData = useSelector((state) => state.nftDataSlice.nftData);
-  console.log(nftData);
   return (
     <>
       <header className={classes.header}>Trending</header>
       <main className={classes.main}>
         {Object.values(nftData).map((value) => (
-          <ProductItem value={value} key={value.title}></ProductItem>
+          <ProductItem value={value} key={value.title} />
         ))}
       </main>
     </>

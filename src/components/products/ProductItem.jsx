@@ -2,7 +2,7 @@
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-27 03:36:36
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-27 08:07:56
+ * @LastEditTime: 2023-04-28 18:48:38
  * @FilePath: \workspace\ez-swap\src\components\products\ProductItem.jsx
  * @Description:
  *
@@ -21,8 +21,8 @@ function ProductItem({ value }) {
           <img
             className={classes.productImg}
             src="/image/image 3.png"
-            alt=""
-          ></img>
+            alt="productLogo"
+          />
 
           <div className={classes.container}>
             <div className={classes.title}>{value.title}</div>

@@ -2,7 +2,7 @@
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-26 23:24:14
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-28 02:06:09
+ * @LastEditTime: 2023-04-28 18:44:56
  * @FilePath: \workspace\ez-swap\src\components\Layout\MainHeader.jsx
  * @Description:
  *
@@ -19,15 +19,13 @@ function MainHeader() {
   };
 
   return (
-    <>
-      <header className={classes.header}>
-        <span>
-          {/* <img src="/image/ezSwapLogo.png" alt="ezSwapLogo" /> */}
-        </span>
-        <button onClick={clickMyPoolsHandler}>My Pools</button>
-        <button>Connect Wallet</button>
-      </header>
-    </>
+    <header className={classes.header}>
+      <span>{/* <img src="/image/ezSwapLogo.png" alt="ezSwapLogo" /> */}</span>
+      <button type="submit" onClick={clickMyPoolsHandler}>
+        My Pools
+      </button>
+      <button type="submit">Connect Wallet</button>
+    </header>
   );
 }
 
