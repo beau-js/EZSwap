@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 /*
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-28 02:08:52
@@ -18,7 +19,6 @@ const poolsSlice = createSlice({
 
   reducers: {
     setPoolsData: (state, action) => {
-      // eslint-disable-next-line no-param-reassign
       state.poolsData = action.payload;
     },
   },

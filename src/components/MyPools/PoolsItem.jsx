@@ -2,20 +2,27 @@
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-27 18:25:55
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-28 19:26:17
+ * @LastEditTime: 2023-04-29 02:24:50
  * @FilePath: \workspace\ez-swap\src\components\MyPools\PoolsItem.jsx
  * @Description:
  *
  * Copyright (c) 2023 by ${git_name_email}, All Rights Reserved.
  */
+import { useSelector } from 'react-redux';
 import Card from '../ui/Card';
 import styles from './PoosItem.module.scss';
+import WalletAddress from '../ui/WalletAddress';
 
 function PoolsItem({ value }) {
+  const inputWalletAddress = useSelector(
+    (state) => state.inputWalletSlice.inputWallet
+  );
+
   let collectionType;
   let balance;
 
   if (value.title === 'Trading Pools') {
+    collectionType = 'NFT Collection - ETH';
     balance = `${value.balance.token}ETH ${value.balance.nft}NFTs`;
   }
 
@@ -40,7 +47,7 @@ function PoolsItem({ value }) {
       <Card className={styles.outCard}>
         <div className={styles.cardHeader}>
           <div className={styles.cardHeaderLeft}>
-            <input type="text" />
+            <WalletAddress>{inputWalletAddress}</WalletAddress>
             <div className={styles.collectionType}>{collectionType}</div>
           </div>
 

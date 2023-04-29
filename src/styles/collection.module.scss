@@ -1,0 +1,40 @@
+@import '_mixins.scss';
+
+.container {
+  color: white;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      margin-bottom: 21px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      // justify-content: space-between;
+
+      li {
+        width: 103px;
+        height: 70px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 24px;
+
+        span {
+          color: #67c6d5;
+          margin-bottom: 7px;
+        }
+      }
+    }
+
+    .wallet {
+      @include headWallet;
+    }
+  }
+}

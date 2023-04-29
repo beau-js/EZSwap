@@ -2,7 +2,7 @@
  * @Author: Beau pg.beau@outlook.com
  * @Date: 2023-04-26 23:09:58
  * @LastEditors: Beau pg.beau@outlook.com
- * @LastEditTime: 2023-04-28 18:05:56
+ * @LastEditTime: 2023-04-29 02:49:02
  * @FilePath: \workspace\ez-swap\src\pages\index.jsx
  * @Description:
  *
@@ -13,13 +13,17 @@
 
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
+import { useRouter } from 'next/router';
 import ProductsList from '@/components/products/ProductsList';
 import classes from '../styles/Home.module.scss';
 import Button from '@/components/ui/Button';
 import { setNftData } from '@/store/features/nftDataSlice';
+import { setInputWallet } from '@/store/features/input-wallet-slice';
 
 function Home() {
+  const router = useRouter();
   const dispatch = useDispatch();
+
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
@@ -30,6 +34,18 @@ function Home() {
     }
     fetchData();
   }, [dispatch]);
+
+  const pressEnterHandler = (event) => {
+    if (event.key === 'Enter') {
+      router.push({
+        pathname: '/collection',
+      });
+    }
+  };
+
+  const inputChangeHandler = (event) => {
+    dispatch(setInputWallet(event.target.value));
+  };
 
   return (
     <div className={classes.main}>
@@ -55,6 +71,8 @@ function Home() {
         <input
           type="text"
           placeholder="Enter Collection Name or Contract Address"
+          onKeyDown={pressEnterHandler}
+          onChange={inputChangeHandler}
         />
       </section>
 
